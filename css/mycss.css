@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.content {
+    width: 70%;
+    max-width: 85%;
+    text-align: center;
+    margin-bottom: 50px;
+    z-index: 25;
+    color: #99ffff;
+    pointer-events: auto;
+}
+
+.parallax-container {
+    position: absolute;
+    /*width: 3000px;*/
+    width: 2000px;
+    /*height: 2500px;*/
+    height: 2200px;
+    margin: 0 auto;
+/*    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);*/
+    transform: translate(0, -3%);
+    pointer-events: none; /* Щоб прокрутка працювала під контейнером */
+}
+
+.hexagon {
+    position: absolute;
+    box-sizing: border-box;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    /*border: 3px solid black;*/
+    /* Додаткові стилі для вмісту гексагонів (якщо знадобиться) */
+    /* font-size: 16px; */
+    /*color: #333;*/
+    /*background-color: #1a1b29;*/
+    /*box-shadow: 0 5px 15px rgba(0, 0, 240, 0.5);*/
+    /*box-shadow: 0 5px 15px rgba(85, 220, 221, 0.4);*/
+    /*box-shadow: -15px -15px -15px rgba(250, 20, 41, 0.7);*/
+    color: #99ffff;
+    /*background-color: azure;*/
+    /*background-color: mediumaquamarine;*/
+    /*background-image: linear-gradient(to bottom, rgba(0, 70, 240, 1), rgba(0, 130, 230, 0));*/
+    /*background-image: linear-gradient(to bottom, #1a1b29, rgba(0, 130, 230, 0.5));*/
+    background-image: linear-gradient(to bottom, #1a1b29, rgba(120, 210, 255, 1));
+    pointer-events: auto; 
+    transition: transform 0.4s ease-in-out;
+}
+.hexagonLarge {     
+}
+.hexagonMiddle {    
+}
+.hexagonSmall {    
+}
+.hexagonLarge:hover {
+    transform: translate(8px, 8px);
+    background-image: linear-gradient(to bottom, rgba(30, 0, 250, 0.9), rgba(30, 0, 250, 0.3) );
+}
+.hexagonMiddle:hover {
+    transform: translate(4px, 4px);
+    background-image: linear-gradient(to bottom, rgba(30, 0, 250, 0.9), rgba(30, 0, 250, 0.3) );
+}
+.hexagonSmall:hover {
+    transform: translate(2px, 2px);
+    background-image: linear-gradient(to bottom, rgba(30, 0, 250, 0.9), rgba(30, 0, 250, 0.3) );
+}
+/*.hexagon:hover {
+    transform: translate(8px, 8px);
+    background-image: linear-gradient(to bottom, #1a1b29, rgba(30, 0, 250, 0.9));
+    background-image: linear-gradient(to bottom, rgba(30, 0, 250, 0.9), rgba(30, 0, 250, 0.3) );
+}*/
+
+.hex-color-1 {
+    background-color: rgba(85, 220, 221, 0.4);
+}
+.hex-color-2 {
+    background-color: rgba(0, 130, 230, 0.3);
+}
+.back-groung-1 {
+    position: fixed;
+    top: 300px;
+    left: 300px;
+    width: 300px;
+    height: 300px;
+    background-color: #ff00ff;
+    box-shadow: 
+        0 0 5px #ff00ff,       
+        0 0 10px #ff00ff,      
+        0 0 15px #ff00ff,    
+        0 0 20px #ff00ff,
+        0 0 25px #ff00ff; 
+}
+.back-groung-2 {
+    position: fixed;
+    top: 450px;
+    left: 700px;
+    width: 300px;
+    height: 300px;
+    background-color: #6699ff;
+    box-shadow:
+        0 0 5px #6699ff,       
+        0 0 10px #6699ff,      
+        0 0 15px #6699ff,      
+        0 0 20px #6699ff,
+        0 0 25px #6699ff; 
+}
+.back-groung-3 {
+    position: fixed;
+    top: 370px;
+    left: 840px;
+    width: 500px;
+    height: 300px;
+    background-color: #6699ff;
+    box-shadow:
+        0 0 5px #6699ff,       
+        0 0 10px #6699ff,      
+        0 0 15px #6699ff,      
+        0 0 20px #6699ff,
+        0 0 25px #6699ff; 
+}
+.back-groung-4 {
+    position: fixed;
+    top: 670px;
+    left: 1440px;
+    width: 300px;
+    height: 800px;
+    background-color: #66ff66;
+    box-shadow:
+        0 0 5px #66ff66,       
+        0 0 10px #66ff66,      
+        0 0 15px #66ff66,      
+        0 0 20px #66ff66,
+        0 0 25px #66ff66; 
+}
+/*from web :*/ 
+/*#1a1b29*/
