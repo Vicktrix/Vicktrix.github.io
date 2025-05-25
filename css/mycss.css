@@ -1,6 +1,14 @@
 :root {
 	--height-of-header: 130px;
 	--header-color: #328989;
+/*	--width-of-open-navi: 15%;
+	--width-of-closed-navi: 4%;
+	--content-color: #999999;
+	--content-color: #ccddee;
+	--main-color: #77aadd;
+	--main-color: rgba(119, 170, 221, 0.6);
+	--side-color: #00a3bb;
+	--footer-height: 100px;*/
 }
  * {
 	margin: 0px;
@@ -118,16 +126,26 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0;
+    /*padding: 50px 0;*/
+    padding: 120px 0;
 }
 
 .content {
     width: 70%;
     max-width: 85%;
     text-align: center;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
     z-index: 25;
-    color: #99ffff;
+    /*color: #99ffff;*/
+    color: #1a1b29;
+    font-size: 1.4em;
+    line-height: 2;
+    margin: 50px 50px;
+    padding: 10px 20px;
+    /*top: -50px;*/
+    
+    /*background-image: linear-gradient(to bottom, rgba(0, 130, 230, 1), rgba(0, 130, 230, 0.5));*/
+    background-image: linear-gradient(to bottom, rgba(50, 150, 250, 1), rgba(50, 150, 250, 0.6));
     pointer-events: auto;
 }
 
