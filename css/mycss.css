@@ -1,14 +1,10 @@
 :root {
 	--height-of-header: 130px;
 	--header-color: #328989;
-/*	--width-of-open-navi: 15%;
-	--width-of-closed-navi: 4%;
-	--content-color: #999999;
-	--content-color: #ccddee;
-	--main-color: #77aadd;
-	--main-color: rgba(119, 170, 221, 0.6);
-	--side-color: #00a3bb;
-	--footer-height: 100px;*/
+        --container-height: 1200px;
+        --hexagon-z-index: 10;
+        --footer-z-index: 25;
+        --header-z-index: 100;
 }
  * {
 	margin: 0px;
@@ -21,10 +17,8 @@
 .header {
 	width: 100%;
 	padding: 30px;
-        /*margin-right: 50px;*/
 	font-size: 1.6em;
 	color: azure;
-	/*background-color: var(--header-color);*/
 	background-image: url(https://raw.githubusercontent.com/Vicktrix/Vicktrix.github.io/refs/heads/sources/images/head_panorama_2.jpg);
 	/*border-bottom: 2px solid blue;*/
 	box-shadow: 0 15px 25px rgba(0, 0, 240, 0.5);
@@ -36,7 +30,7 @@
 	position: fixed;
 	top: -50px;
 	left: 0;
-	z-index: 100;
+	z-index: var(--header-z-index);
 	height: var(--height-of-header);
 	transition: ease-in-out 0.5s;
 }
@@ -55,16 +49,9 @@
     /*right: 70px;*/
     text-shadow: 0px 0px 5px white, 0px 0px 10px yellow;
 }
-.header #space_between {
-    /*margin: 0 250px;*/
-}
 .header h2:hover{ 
     text-shadow: 0px 0px 10px white, 0px 0px 15px yellow;
 }
-
-/*h1, h2, h3, h4{
-	margin: 30px;
-}*/
 /*           header            */
 ul {
 	list-style-type: none;
@@ -76,8 +63,6 @@ ul {
 }
 .header .list ul li{
 	margin: 10px;
-	/*padding: 20px 30px;*/
-	/*padding: 10px 20px;*/
 	border-radius: 5px;
 	transition: linear 0.5s;
 }
@@ -86,7 +71,6 @@ ul {
 	padding: 20px 30px;
         transition: ease-in-out 0.5s;
         margin-top: 5px;
-	/*color: #000;*/
 }
 .header .list ul li:hover {
 	background-image: linear-gradient(to bottom, rgba(0, 130, 230, 1), rgba(0, 130, 230, 0));
@@ -104,15 +88,8 @@ img{
 a {
 	text-decoration: none;
 }
-/*a:hover {
-    color: #0033ff;
-}*/
-
 /*------------------------------------------*/
 body {
-/*    margin: 0;
-    padding: 0;
-    font-family: sans-serif;*/
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #f0f0f0;
@@ -141,26 +118,57 @@ body {
     font-size: 1.4em;
     line-height: 2;
     margin: 50px 50px;
-    padding: 10px 20px;
+    padding: 15px 20px;
     /*top: -50px;*/
-    
-    /*background-image: linear-gradient(to bottom, rgba(0, 130, 230, 1), rgba(0, 130, 230, 0.5));*/
-    background-image: linear-gradient(to bottom, rgba(50, 150, 250, 1), rgba(50, 150, 250, 0.6));
+    background-image: linear-gradient(to bottom, rgba(50, 150, 250, 1) 60%, rgba(80, 180, 255, 0.7));
     pointer-events: auto;
+}
+
+.content p {
+    text-indent: 2em;
+    text-align: left;
+}
+
+.footer {
+	height: 100px;
+        width: 100%;
+	font-size: 25px;
+        bottom: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-image: linear-gradient(to right, darkturquoise, rgba(0,50,250,0.8));
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: blue;
+	/*padding: 20px;*/
+        /*z-index: 25;*/
+        z-index: var(--footer-z-index);
+}
+.social i {
+	margin: 10px;
+	padding-left: 10px;
+	font-size: 40px;
+	color: #27ffeb;
+}
+.social i:hover {
+	color: #ef29b2;
+	font-size: 55px;
+	cursor: pointer;
+	transition: linear 0.3s;
 }
 
 .parallax-container {
     position: absolute;
-    /*width: 3000px;*/
     width: 2000px;
-    height: 2000px;
-    /*height: 2200px;*/
+    height: var(--container-height);
     margin: 0 auto;
 /*    top: 50%;
     left: 50%;
     transform: translate(-50%, -20%);*/
     /*transform: translate(0, -3%);*/
-    pointer-events: none; /* Щоб прокрутка працювала під контейнером */
+    pointer-events: none; 
 }
 
 .hexagon {
@@ -170,20 +178,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    /*border: 3px solid black;*/
-    /* Додаткові стилі для вмісту гексагонів (якщо знадобиться) */
-    /* font-size: 16px; */
-    /*color: #333;*/
-    /*background-color: #1a1b29;*/
-    /*box-shadow: 0 5px 15px rgba(0, 0, 240, 0.5);*/
-    /*box-shadow: 0 5px 15px rgba(85, 220, 221, 0.4);*/
-    /*box-shadow: -15px -15px -15px rgba(250, 20, 41, 0.7);*/
+    /*z-index: 10;*/
+    z-index: var(--hexagon-z-index);
     color: #99ffff;
-    /*background-color: azure;*/
-    /*background-color: mediumaquamarine;*/
-    /*background-image: linear-gradient(to bottom, rgba(0, 70, 240, 1), rgba(0, 130, 230, 0));*/
-    /*background-image: linear-gradient(to bottom, #1a1b29, rgba(0, 130, 230, 0.5));*/
     background-image: linear-gradient(to bottom, #1a1b29, rgba(120, 210, 255, 1));
     pointer-events: auto; 
     transition: transform 0.4s ease-in-out;
@@ -206,12 +203,6 @@ body {
     transform: translate(2px, 2px);
     background-image: linear-gradient(to bottom, rgba(30, 0, 250, 0.9), rgba(30, 0, 250, 0.3) );
 }
-/*.hexagon:hover {
-    transform: translate(8px, 8px);
-    background-image: linear-gradient(to bottom, #1a1b29, rgba(30, 0, 250, 0.9));
-    background-image: linear-gradient(to bottom, rgba(30, 0, 250, 0.9), rgba(30, 0, 250, 0.3) );
-}*/
-
 .hex-color-1 {
     background-color: rgba(85, 220, 221, 0.4);
 }
@@ -262,10 +253,10 @@ body {
 }
 .back-groung-4 {
     position: fixed;
-    top: 670px;
-    left: 1440px;
+    top: 470px;
+    left: 1450px;
     width: 300px;
-    height: 800px;
+    height: 700px;
     background-color: #66ff66;
     box-shadow:
         0 0 5px #66ff66,       
@@ -274,5 +265,3 @@ body {
         0 0 20px #66ff66,
         0 0 25px #66ff66; 
 }
-/*from web :*/ 
-/*#1a1b29*/

@@ -1,7 +1,7 @@
 const container = document.getElementById('hexagons');
 //const containerWidth = 3000;
 const containerWidth = 2000;
-const containerHeight = 2000;
+const containerHeight = 1400;
 
 let row = 0, col = 0, x = 0, y = 0, index = 0;
 let hexagonSide;
@@ -87,7 +87,8 @@ generateByMe();
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 //    container.style.transform = `translate(-50%, calc(-20% + ${scrollY / 2}px))`;
-    container.style.transform = `translate(0, calc(-3% + ${scrollY / 2}px))`;
+//    container.style.transform = `translate(0, calc(-3% + ${scrollY / 2}px))`;
+    container.style.transform = `translate(0, calc(${scrollY / 2}px))`;
 //    resize(scrollY);
 });
 
