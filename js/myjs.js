@@ -76,7 +76,7 @@ const fillAndAppend = (x,y,i) => {
         hexagon.style.height = `${hexagonHeight}px`;
 //        if(i%2 === 0) hexagon.classList.add('hex-color-1');
 //        else hexagon.classList.add('hex-color-2');
-        hexagon.innerText = i;
+//        hexagon.innerText = i;
         container.appendChild(hexagon);
 };
 
